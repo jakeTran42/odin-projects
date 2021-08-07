@@ -7,3 +7,4 @@
 1. HTML boilerplating, tags etc
 2. Lists, images, links
 3. Working with directory and pathings
+4. Create meaningful and concise git message/commits
