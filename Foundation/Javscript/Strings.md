@@ -2,10 +2,11 @@
 
 ## Basic
 
-1. Three way to create strings. 
-  * Double quotes "string"
-  * Single quotes 'string'
-  * String literal \`${variables or expressions}`
+1. Three way to create strings.
+
+- Double quotes "string"
+- Single quotes 'string'
+- String literal \`${variables or expressions}`
 
 2. Escape character '\\' to make quote recognize as text in case we need to use quotes for other purposes.
 
@@ -27,7 +28,7 @@
 
 `replace() method does not change the string it is called on. It returns a new string and it only replace the first match. To replace case sensitive string use the /i flag eg. text.replace(/STRING/i, "Another");. The flag /g will replace every encounter/matches in the text.`
 
-6. Convert to upper and lowercase... toUpperCase() || to LowerCase()
+6. Convert to upper and lowercase... toUpperCase() || toLowerCase()
 
 7. concat() joins two or more strings.
 
