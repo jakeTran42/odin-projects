@@ -9,8 +9,6 @@ function playOne(choices) {
   let playerSelection = prompt("Enter Rock, Paper, or Scissors").toLowerCase();
   let computerSelection = getRandomSelection(choices);
 
-  console.log(playerSelection, computerSelection)
-
   if (playerSelection == computerSelection) {
     return "Draw";
   } else if (playerSelection == "rock" && computerSelection == "scissor") {
@@ -24,4 +22,31 @@ function playOne(choices) {
   }
 }
 
-console.log(playOne(RPSArr));
+function game(choices) {
+  let playerScore = 0;
+  let computerScore = 0;
+  let scoreTracker = [];
+
+  for (let i = 0; i < 5; i++) {
+    let winner = playOne(choices);
+
+    if (winner == "Draw") {
+      playerScore++;
+      computerScore++;
+    } else if (winner == "Player") {
+      playerScore++;
+    } else {
+      computerScore++;
+    }
+
+    scoreTracker.push(`Round ${i + 1}: ${winner}`);
+  }
+
+  if (playerScore > computerScore) {
+    return `${scoreTracker} \nPlayer Score: ${playerScore} \nComputer Score: ${computerScore} \nWinner: Player`;
+  } else {
+    return `${scoreTracker} \nPlayer Score: ${playerScore} \nComputer Score: ${computerScore} \nWinner: Computer`;
+  }
+}
+
+console.log(game(RPSArr));
