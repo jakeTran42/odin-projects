@@ -1,10 +1,12 @@
 const RPSArr = ["rock", "paper", "scissor"];
 
+// Helper function to get random choice from RPSArr
 function getRandomSelection(choices) {
   let random = Math.floor(Math.random() * choices.length);
   return choices[random];
 }
 
+// Take in RPSArr and return who win 
 function playOne(choices) {
   let playerSelection = prompt("Enter Rock, Paper, or Scissors").toLowerCase();
   let computerSelection = getRandomSelection(choices);
@@ -22,6 +24,7 @@ function playOne(choices) {
   }
 }
 
+// Main function to keep track of winner and rounds, returns winner after 5 round
 function game(choices) {
   let playerScore = 0;
   let computerScore = 0;
