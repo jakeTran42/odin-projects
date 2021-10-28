@@ -4,9 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>DOM Manipulation</title>
+
+    <!-- Using Javascript on the header -->
+    <script src="./DOM-manipulation-practice.js" defer></script>
   </head>
   <body>
-    <script src="./DOM-manipulation.js"></script>
+    <div id="container"></div>
+
+    <!-- Your JavaScript, for the most part, is run whenever the JS file is run, 
+      or when the script tag is encountered in the HTML. 
+      If you are including your JavaScript at the top of your file, 
+       of these DOM manipulation methods will not work because the 
+       JS code is being run before the nodes are created in the DOM. 
+       The simplest way to fix this is to include your JavaScript at the bottom of your HTML file 
+       so that it gets run after the DOM nodes are parsed and created. -->
+
+    <!-- <script src="./DOM-manipulation-practice.js"></script> -->
   </body>
 </html>
