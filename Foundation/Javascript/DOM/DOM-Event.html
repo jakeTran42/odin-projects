@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <body>
+    <!-- method 1 This solution is less than ideal because we’re cluttering our HTML with JavaScript. 
+    Also, we can only have 1 “onclick” event per element. -->
+    <h1>Method 1</h1>
+    <button onclick="alert('Hello World')">Click Me</button>
+
+    <!-- method 2 
+    This is a little better. We’ve moved the JS out of the HTML and into a JS file, 
+    but we still have the problem that a DOM element can only have 1 “onclick” property.-->
+    <h1>Method 2</h1>
+    <button id="btn2">Click Me</button>
+
+    <!-- method 3 Now, we maintain separation of concerns, 
+      and we also allow multiple event listeners if the need arises. Method 3 is much more flexible and powerful, 
+      though it is a bit more complex to set up.-->
+    <h1>Method 3</h1>
+    <button id="btn3">Click Me Too</button>
+
+    <!-- Even listener callbacks -->
+    <h1>Call backs</h1>
+    <button id="btn4">Click hereee</button>
+
+    <script>
+      // Method 2 javascript
+      const btn2 = document.querySelector("#btn2");
+      btn2.onclick = () => alert("Hello World");
+
+      // Method 3 javascript
+      const btn3 = document.querySelector("#btn3");
+      btn3.addEventListener("click", () => {
+        alert("Hello World");
+      });
+
+      //Call back methods to change background
+      const btn4 = document.querySelector("#btn4");
+      btn4.addEventListener("click", function (e) {
+        e.target.style.background = "blue";
+      });
+    </script>
+  </body>
+</html>
